@@ -18,8 +18,8 @@ end
 Capybara.configure do |config|
   config.default_driver = :selenium_chrome
   config.default_max_wait_time = 15
-  # config.app_host = 'https://training-wheels-protocol.herokuapp.com'
+  config.app_host = 'https://training-wheels-protocol.herokuapp.com'
 
-  #iCaseo
-  config.app_host = 'https://painel.icasei.com.br/'
+  #iCasei
+  #config.app_host = 'https://painel.icasei.com.br/'
 end
