@@ -1,0 +1,22 @@
+Subindo arquivo
+
+
+describe '', : do
+
+    before(:each) do
+        visit '/'
+    end
+
+    it '' do 
+
+
+    end
+
+end
+
+Expressão regular 
+$('img[alt^=Pantera Negra]'); ^ começa
+
+$('img[alt$=Pantera Negra]'); $ termina
+
+$('img[alt*=Pantera Negra]'); * contém
