@@ -33,18 +33,20 @@ describe 'Alerta de JS', :alerts do
     end
 
     it 'accept prompt', :accept_prompt do 
-        accept_prompt(with: 'Fernando') do 
+        accept_prompt(with: 'Junior') do 
             click_button 'Prompt'
         end
     
-        expect(page).to have_content 'Olá, Fernando'
+        expect(page).to have_content 'Olá, Junior'
     end
 
     it 'accept prompt', :dismiss_prompt do 
-        accept_prompt(with: 'null') do 
+        
             click_button 'Prompt'
             page.driver.browser.switch_to.alert.dismiss
-        end
+        
     
         expect(page).to have_content 'Olá, null'
+        sleep 3
+    end
 end
