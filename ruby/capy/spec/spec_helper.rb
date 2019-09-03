@@ -17,6 +17,11 @@ RSpec.configure do |config|
   config.before(:example) do
       page.current_window.resize_to(1280, 800) #tamanho da janela
   end
+
+  config.after(:example) do |e| #um exemplo por vez
+      nome = e.description.gsub(/[^A-Za-z0-9 ]/, '').tr(' ', '_')
+      page.save_screenshot('log/' + nome + '.png')
+  end
 end
 
 Capybara.configure do |config|
