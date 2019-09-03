@@ -5,6 +5,8 @@ describe 'ids dinamicos', :ids_dinamicos do
         visit 'access'
     end
 
+    # Expressão regular para encontrar elementos com css selector
+    
     it 'cadastro' do
         find('input[id$=UsernameInput]').set 'fernando' # '$' valor de id TERMINA com UsernameInput[expressão regular dentro de um css selector]
         find('input[id^=PasswordInput]').set '123456'  # '^' valor de id COMEÇA com PasswordInput

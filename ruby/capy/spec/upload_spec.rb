@@ -37,6 +37,8 @@ end
     #     #Classe Dir | Método pwd
     #     #é o método que retorna o caminho no qual eu tenho o diretorio de execução no meu projeto
     #     visit 'login'
+    #     #@imagem = Dir.pwd + '/spec/fixtures/lua.jpg'
+    #     @imagem = 'lua.jpg'
     # end
 
 
@@ -48,26 +50,15 @@ end
     #     visit 'https://admin.icasei.com.br/store/home'
     #     find('.menu-texto').click
     #     # find('.mp-product-edit.tb-products-line').
-    #     find('.mp-product-edit.tb-products-line').click
+    #     find('table tbody tr', text: 'Lua de mel').click
+    #     clique = find('#btnUpload').click
     #     sleep 3
-    # end
+    #     attach_file(clique, @imagem)
 
-    # end
+    #     #click_button 'Upload'
 
-
-    #     @imagem = Dir.pwd + '/spec/fixtures/lista/Abajur.jpg' 
-    # end
-
-    # it 'Upload de imagem', :upload_imagem do 
-    #     attach_file('file-upload', @imagem)
-    #     click_button 'Upload'
-
-    #     img = find('#new-image')
-    #     expect(img[:src]).to include 'imagem.jpg'
-    # end
-
-
-    # after(:each) do
-    #     sleep 3
-    # end
+    #     #img = find('#new-image')
+    #     #expect(img[:src]).to include 'lua de mel.jpg'
+  
+    #  end
 # end
