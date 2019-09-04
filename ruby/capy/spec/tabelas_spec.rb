@@ -28,7 +28,7 @@ describe 'Tabelas', :tabs do
         # Coluna 3 posição 2 apresenta o filme 'Velozes e Furiosos' 
         # retorna um array de elementos, e array sempre começa na posição 0
         movie = diesel.all('td')[2].text
-        expect(movie).to eql 'Velozes e Furiosos'
+        expect(movie).to eql 'fast and furious'
     end
 
     it 'deve exibir o insta do Chris Evans' do 
