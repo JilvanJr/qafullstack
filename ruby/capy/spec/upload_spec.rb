@@ -11,6 +11,7 @@ describe 'Upload', :upload do
     end
 
     it 'Upload com arquivo texto' do
+        #puts @imagem retorna no cdm o caminho do arquivo.
         attach_file('file-upload', @arquivo)
         click_button 'Upload'
 
@@ -31,34 +32,3 @@ describe 'Upload', :upload do
         sleep 3
     end
 end
-
-#----------------------------------
-    # before(:each) do
-    #     #Classe Dir | Método pwd
-    #     #é o método que retorna o caminho no qual eu tenho o diretorio de execução no meu projeto
-    #     visit 'login'
-    #     #@imagem = Dir.pwd + '/spec/fixtures/lua.jpg'
-    #     @imagem = 'lua.jpg'
-    # end
-
-
-    # it 'login' do
-    #     fill_in 'email', with: 'jilvanj@hotmail.com'
-    #     fill_in 'password', with: 'Septuaginta10'
-    #     click_button 'submit'
-    #     expect(find('.dashboard-view__title.ng-binding.ng-scope').text).to include 'Jilvan Pereira de Sousa Junior!'
-    #     visit 'https://admin.icasei.com.br/store/home'
-    #     find('.menu-texto').click
-    #     # find('.mp-product-edit.tb-products-line').
-    #     find('table tbody tr', text: 'Lua de mel').click
-    #     clique = find('#btnUpload').click
-    #     sleep 3
-    #     attach_file(clique, @imagem)
-
-    #     #click_button 'Upload'
-
-    #     #img = find('#new-image')
-    #     #expect(img[:src]).to include 'lua de mel.jpg'
-  
-    #  end
-# end

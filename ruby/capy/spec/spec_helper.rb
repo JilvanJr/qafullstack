@@ -15,17 +15,17 @@ RSpec.configure do |config|
   config.include Capybara::DSL
 
   config.before(:example) do
-      page.current_window.resize_to(1280, 800) #tamanho da janela
+      page.current_window.resize_to(1280, 800) #(1920, 1080) #tamanho da janela
   end
 
-  config.after(:example) do |e| #um exemplo por vez
-      nome = e.description.gsub(/[^A-Za-z0-9 ]/, '').tr(' ', '_')
-      page.save_screenshot('log/' + nome + '.png') if e.exception
-  end
+  # config.after(:example) do |e| #um exemplo por vez
+  #     nome = e.description.gsub(/[^A-Za-z0-9 ]/, '').tr(' ', '_')
+  #     page.save_screenshot('log/' + nome + '.png') # if e.exception # quando o teste falha
+  # end
 end
 
 Capybara.configure do |config|
-  config.default_driver = :selenium_chrome
+  config.default_driver = :selenium_chrome #_headless # executar os testes em headless
   config.default_max_wait_time = 15
   config.app_host = 'https://training-wheels-protocol.herokuapp.com'
 
